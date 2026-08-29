@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    CSC Homepage Alpha Build
+    Last Updated: 6 June 2026 @ 20:02:21Z UTC
+    Copyright © 2026 Cook Services Company, LLC | All Rights Reserved.
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cook Services Company, LLC</title>
+  <meta name="description" content="Cook Services Company, LLC is a privately held operating and investment company building practical companies, useful technology, and long-term value.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07172f">
+  <meta name="build" content="CSC Homepage Alpha Build | 6 June 2026 @ 20:02:21Z UTC">
+  <link rel="canonical" href="https://www.cook-international.com/">
+
+  <meta property="og:title" content="Cook Services Company, LLC">
+  <meta property="og:description" content="A privately held operating and investment company building practical companies, useful technology, and long-term value.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cook-international.com/">
+  <meta property="og:image" content="https://www.cook-international.com/CSCLogo01.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root {
+      --csc-navy: #07172f;
+      --csc-navy-2: #0d2448;
+      --csc-blue: #1e4f9a;
+      --csc-gold: #c9972b;
+      --csc-gold-light: #f4d484;
+      --csc-cream: #fff8eb;
+      --csc-paper: #ffffff;
+      --csc-ink: #172033;
+      --csc-muted: #5f6b7d;
+      --csc-line: rgba(23, 32, 51, 0.14);
+      --csc-shadow: 0 24px 70px rgba(7, 23, 47, 0.14);
+      --csc-radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--csc-ink);
+      background:
+        radial-gradient(circle at 8% -12%, rgba(201, 151, 43, 0.26), transparent 34rem),
+        radial-gradient(circle at 94% 4%, rgba(30, 79, 154, 0.12), transparent 30rem),
+        linear-gradient(180deg, #fffaf1 0%, #f6f0e5 46%, #eef2f7 100%);
+      min-height: 100vh;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .skip-link {
+      position: absolute;
+      top: -48px;
+      left: 16px;
+      z-index: 1000;
+      background: var(--csc-navy);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+    .skip-link:focus { top: 16px; }
+
+    .shell {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 248, 235, 0.92);
+      border-bottom: 1px solid var(--csc-line);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      min-height: 132px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      min-width: 0;
+    }
+
+    .brand-logo,
+    .footer-logo {
+      width: 122px;
+      height: 122px;
+      object-fit: contain;
+      padding: 7px;
+      background: #fff;
+      border: 1px solid rgba(201, 151, 43, 0.45);
+      border-radius: 22px;
+      box-shadow: 0 18px 38px rgba(7, 23, 47, 0.15);
+      flex: 0 0 auto;
+    }
+
+    .brand-name {
+      display: block;
+      color: var(--csc-navy);
+      font-weight: 950;
+      letter-spacing: -0.015em;
+      line-height: 1.05;
+      font-size: clamp(19px, 2.25vw, 25px);
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--csc-navy);
+      font-size: 13px;
+      font-weight: 850;
+      border-radius: 999px;
+      padding: 10px 13px;
+      transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(201, 151, 43, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .nav .nav-cta {
+      color: #fff;
+      background: var(--csc-navy);
+      box-shadow: 0 16px 34px rgba(7, 23, 47, 0.18);
+    }
+
+    .nav .nav-cta:hover { background: #102957; }
+
+    main { padding-bottom: 72px; }
+
+    .hero {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+      gap: 34px;
+      align-items: center;
+      padding: 56px 0 40px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #846214;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--csc-navy);
+      font-size: clamp(44px, 6.3vw, 78px);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      max-width: 860px;
+    }
+
+    .lede {
+      margin: 24px 0 0;
+      max-width: 760px;
+      color: #344157;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+    }
+
+    .mission-box {
+      margin-top: 26px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.70);
+      border: 1px solid var(--csc-line);
+      box-shadow: 0 18px 46px rgba(7, 23, 47, 0.08);
+    }
+
+    .mission-box strong {
+      color: var(--csc-navy);
+      display: block;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .mission-box p {
+      margin: 0;
+      color: #455267;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .actions,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 19px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--csc-navy), #16396f);
+      color: #fff;
+      box-shadow: 0 18px 42px rgba(7, 23, 47, 0.22);
+    }
+    .btn-primary:hover { background: #102b5b; }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--csc-gold), #f2c966);
+      color: #241804;
+      box-shadow: 0 18px 42px rgba(201, 151, 43, 0.22);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--csc-navy);
+      border-color: var(--csc-line);
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 580px;
+    }
+
+    .image-stack {
+      position: relative;
+      height: 100%;
+      min-height: 580px;
+    }
+
+    .photo-card {
+      position: absolute;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      box-shadow: var(--csc-shadow);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-main { inset: 10px 0 135px 60px; }
+
+    .photo-secondary {
+      width: 52%;
+      height: 210px;
+      left: 0;
+      bottom: 52px;
+      z-index: 2;
+    }
+
+    .photo-third {
+      width: 44%;
+      height: 170px;
+      right: 20px;
+      bottom: 10px;
+      z-index: 3;
+    }
+
+    .stat-card {
+      position: absolute;
+      z-index: 4;
+      right: 0;
+      top: 72px;
+      width: min(288px, 80%);
+      border-radius: 24px;
+      background: rgba(255, 250, 241, 0.92);
+      border: 1px solid rgba(201, 151, 43, 0.35);
+      box-shadow: var(--csc-shadow);
+      padding: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-card strong {
+      display: block;
+      color: var(--csc-navy);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .stat-card span {
+      color: var(--csc-muted);
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .section { padding: 54px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      color: var(--csc-navy);
+      font-size: clamp(31px, 4.2vw, 50px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--csc-muted);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    .statement {
+      background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255,248,235,0.78));
+      border: 1px solid var(--csc-line);
+      border-radius: 32px;
+      padding: clamp(24px, 4vw, 38px);
+      box-shadow: 0 18px 50px rgba(7, 23, 47, 0.08);
+    }
+
+    .statement p {
+      margin: 0;
+      color: #344157;
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.72;
+    }
+
+    .statement .line {
+      margin-top: 18px;
+      color: var(--csc-navy);
+      font-weight: 950;
+      letter-spacing: -0.025em;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 20px;
+    }
+
+    .brand-card {
+      position: relative;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border-radius: var(--csc-radius);
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--csc-line);
+      box-shadow: 0 16px 46px rgba(7, 23, 47, 0.10);
+      text-decoration: none;
+      overflow: hidden;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .brand-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 72px rgba(7, 23, 47, 0.16);
+      border-color: rgba(201, 151, 43, 0.52);
+      text-decoration: none;
+    }
+
+    .brand-card::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -85px;
+      top: -85px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(201,151,43,0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .brand-logo-box {
+      position: relative;
+      z-index: 1;
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 22px;
+      border: 1px solid rgba(7, 23, 47, 0.10);
+      padding: 18px;
+    }
+
+    .brand-logo-box img {
+      max-height: 198px;
+      max-width: 98%;
+      width: auto;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .brand-card h3 {
+      margin: 24px 0 0;
+      color: var(--csc-navy);
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    sup {
+      font-size: 0.55em;
+      line-height: 0;
+      position: relative;
+      top: -0.3em;
+    }
+
+    .brand-card p {
+      margin: 12px 0 0;
+      color: #526074;
+      line-height: 1.62;
+      font-size: 14.5px;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 20px;
+      color: var(--csc-blue);
+      font-weight: 950;
+      font-size: 14px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--csc-line);
+      border-radius: var(--csc-radius);
+      padding: 28px;
+      box-shadow: 0 18px 42px rgba(11, 20, 38, 0.08);
+    }
+
+    .contact-card address {
+      font-style: normal;
+      color: #334155;
+      line-height: 1.8;
+    }
+
+    .contact-card strong { color: var(--csc-navy); }
+
+    .contact-note {
+      color: var(--csc-muted);
+      margin-top: 16px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .contact-form {
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    label {
+      display: block;
+      margin: 0 0 6px;
+      font-weight: 850;
+      color: var(--csc-navy);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid rgba(7, 23, 47, 0.18);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font: inherit;
+      background: #fff;
+      color: var(--csc-ink);
+    }
+
+    textarea { resize: vertical; }
+
+    .contact-image {
+      border-radius: var(--csc-radius);
+      overflow: hidden;
+      min-height: 420px;
+      box-shadow: var(--csc-shadow);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      background: #fff;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #040a14, var(--csc-navy));
+      color: #fff;
+      padding: 36px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) minmax(240px, 1.2fr) minmax(220px, 0.8fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-title {
+      font-weight: 950;
+      line-height: 1.12;
+      font-size: 18px;
+    }
+
+    .footer-sub {
+      color: rgba(255, 255, 255, 0.68);
+      margin-top: 7px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      max-width: 430px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px 16px;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+      color: rgba(255, 255, 255, 0.84);
+      text-decoration: none;
+      font-weight: 760;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover,
+    .footer-contact a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.7;
+      font-size: 13px;
+    }
+
+    .copyright {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .copyright-link {
+      color: rgba(255, 255, 255, 0.62);
+      text-decoration: none;
+      font-weight: 760;
+    }
+
+    .copyright-link:hover,
+    .copyright-link:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .copyright-link:focus-visible {
+      outline: 2px solid rgba(244, 212, 132, 0.95);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { min-height: auto; }
+      .hero-media,
+      .image-stack { min-height: 500px; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 12px; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+      }
+
+      .brand { justify-content: center; }
+      .brand-logo, .footer-logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+      }
+      .brand-name { font-size: 17px; white-space: normal; }
+      .nav { justify-content: center; }
+      .nav a { font-size: 12px; padding: 9px 10px; }
+      .hero { padding-top: 38px; }
+      h1 { font-size: clamp(42px, 14vw, 60px); }
+      .actions, .actions .btn, .contact-actions .btn { width: 100%; }
+      .hero-media,
+      .image-stack { min-height: 430px; }
+      .photo-main { inset: 0 0 120px 22px; }
+      .photo-secondary { width: 58%; height: 180px; bottom: 36px; }
+      .photo-third { width: 48%; height: 145px; right: 0; }
+      .stat-card { top: 22px; right: 8px; width: min(250px, 76%); }
+      .brand-card { min-height: 390px; }
+      .brand-logo-box { height: 200px; }
+      .brand-logo-box img { max-height: 170px; }
+      .footer-brand { align-items: flex-start; }
+    }
+
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 22px, 1160px); }
+      .photo-main { inset: 0 0 120px 0; }
+      .photo-secondary { width: 62%; left: 0; }
+      .photo-third { width: 54%; }
+      .stat-card { width: min(238px, 82%); }
+      .contact-image { min-height: 300px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cook Services Company, LLC",
+    "url": "https://www.cook-international.com/",
+    "logo": "https://www.cook-international.com/CSCLogo01.png",
+    "email": "cookservicescompany@gmail.com",
+    "telephone": "+1-317-442-1437",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "151 N. Delaware Street, Suite 122",
+      "addressLocality": "Indianapolis",
+      "addressRegion": "IN",
+      "postalCode": "46204",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://corporate.cook-international.com/",
+      "https://cts.cook-international.com/",
+      "https://www.cgnnews.net/",
+      "https://www.valoismedia.com/",
+      "https://www.livingwordbibles.com/",
+      "https://www.quickhireagency.com/",
+      "https://jobboard.quickhireagency.com/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" aria-label="Site header">
+    <div class="shell topbar-inner">
+      <a class="brand" href="/" aria-label="Cook Services Company home">
+        <img class="brand-logo" src="/CSCLogo01.png" alt="Cook Services Company logo" loading="eager">
+        <span class="brand-name">Cook Services Company, LLC</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="https://corporate.cook-international.com/">Corporate</a>
+        <a href="#mission">Mission</a>
+        <a href="#brands">Brands</a>
+        <a href="https://corporate.cook-international.com/investors/">Investors</a>
+        <a href="https://corporate.cook-international.com/terms/">Terms</a>
+        <a href="https://corporate.cook-international.com/privacy/">Privacy</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Cook Services Company, LLC</p>
+        <h1 id="hero-title">Practical Companies, Useful Technology, & Long-Term Value.</h1>
+        <p class="lede">
+          Cook Services Company, LLC is a privately held operating and investment company supporting a focused family of brands across technology services, publishing, workforce platforms, e-commerce, and investor-focused operations.
+        </p>
+
+        <div class="mission-box" aria-label="Mission statement summary">
+          <strong>Mission Statement</strong>
+          <p>
+            Our mission is to build and operate practical companies that solve real problems, serve customers well, and create long-term value.
+          </p>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#brands">View Our Brands</a>
+          <a class="btn btn-gold" href="https://corporate.cook-international.com/investors/">Investor Resources</a>
+          <a class="btn btn-secondary" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <aside class="hero-media" aria-label="Cook Services Company Indianapolis imagery">
+        <div class="image-stack">
+          <div class="stat-card">
+            <strong>Indianapolis-based. Mission-driven.</strong>
+            <span>CSC builds, supports, and operates practical brands with disciplined execution and long-term value in mind.</span>
+          </div>
+          <figure class="photo-card photo-main">
+            <img src="https://www.cgnnews.net/downtown_indy.webp" alt="Downtown Indianapolis skyline" loading="eager">
+          </figure>
+          <figure class="photo-card photo-secondary">
+            <img src="https://corporate.cook-international.com/monumentcircle01.jpg" alt="Monument Circle in Indianapolis" loading="lazy">
+          </figure>
+          <figure class="photo-card photo-third">
+            <img src="https://www.cgnnews.net/Market_Square_Center,_Indianapolis.png" alt="Market Square Center in Indianapolis" loading="lazy">
+          </figure>
+        </div>
+      </aside>
+    </section>
+
+    <section class="shell section" id="mission" aria-labelledby="mission-title">
+      <div class="section-head">
+        <h2 id="mission-title">Our Mission</h2>
+        <p>CSC is built around disciplined execution, useful products, clear systems, and responsible growth.</p>
+      </div>
+
+      <div class="statement">
+        <p>
+          Cook Services Company, LLC is focused on building and supporting practical companies that solve real problems, serve customers well, and create long-term value. CSC develops and operates brands with a simple standard: build useful products, operate with discipline, and grow responsibly.
+        </p>
+        <p class="line">Practical Companies. Useful Technology. Long-Term Value.</p>
+      </div>
+    </section>
+
+    <section class="shell section" id="brands" aria-labelledby="brands-title">
+      <div class="section-head">
+        <h2 id="brands-title">Our Brands</h2>
+        <p>The CSC family includes operating brands and platforms serving technology, publishing, hiring, investment, and corporate operations.</p>
+      </div>
+
+      <div class="brand-grid">
+        <a class="brand-card" href="https://corporate.cook-international.com/" aria-label="Visit CSC corporate site">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/CSCLogo01.png" alt="Cook Services Company logo" loading="lazy">
+            </div>
+            <h3>Cook Services Company</h3>
+            <p>Corporate information, company resources, policies, and official Cook Services Company materials.</p>
+          </div>
+          <span class="card-link">Visit Corporate →</span>
+        </a>
+
+        <a class="brand-card" href="https://corporate.cook-international.com/investors/" aria-label="Open CSC Investments investor resources">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/CSCInvestmentsLogo.png" alt="CSC Investments logo" loading="lazy">
+            </div>
+            <h3>CSC Investments</h3>
+            <p>Investor resources, portfolio information, and private reporting access for CSC investment operations.</p>
+          </div>
+          <span class="card-link">Investor Resources →</span>
+        </a>
+
+        <a class="brand-card" href="https://cts.cook-international.com/" aria-label="Visit Cook Technology Services">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/CookTechnologyServices.png" alt="Cook Technology Services logo" loading="lazy">
+            </div>
+            <h3>Cook Technology Services</h3>
+            <p>Technology services, web systems, automation tools, business portals, and practical software support.</p>
+          </div>
+          <span class="card-link">Visit CTS →</span>
+        </a>
+
+        <a class="brand-card" href="https://www.cgnnews.net/" aria-label="Visit CGN News">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/CGN_News_Google_square_logo_1000x1000.png" alt="CGN News logo" loading="lazy">
+            </div>
+            <h3>CGN News</h3>
+            <p>A digital-first news network delivering real-time reporting, business intelligence, markets, weather, sports, and public-interest coverage.</p>
+          </div>
+          <span class="card-link">Visit CGN News →</span>
+        </a>
+
+        <a class="brand-card" href="https://www.valoismedia.com/" aria-label="Visit Valois Media Holdings">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/ValoisMediaHoldings.png" alt="Valois Media Holdings logo" loading="lazy">
+            </div>
+            <h3>Valois Media Holdings</h3>
+            <p>A multi-media, print, and ebook publisher with a global ecommerce presence on Amazon and Barnes &amp; Noble.</p>
+          </div>
+          <span class="card-link">Visit Valois Media →</span>
+        </a>
+
+        <a class="brand-card" href="https://www.livingwordbibles.com/" aria-label="Visit Living Word Bibles">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/LivingWordBibles02.png" alt="Living Word Bibles logo" loading="lazy">
+            </div>
+            <h3>Living Word Bibles</h3>
+            <p>A faith-based Bible, publishing, and gift brand focused on Scripture, meaningful products, and Christian resources.</p>
+          </div>
+          <span class="card-link">Visit Living Word Bibles →</span>
+        </a>
+
+        <a class="brand-card" href="https://www.quickhireagency.com/" aria-label="Visit QuickHire">
+          <div>
+            <div class="brand-logo-box">
+              <img src="https://www.cook-international.com/QuickHireTransparentLogo02.png" alt="QuickHire logo" loading="lazy">
+            </div>
+            <h3>QuickHire</h3>
+            <p>A staffing and workforce agency connecting job seekers with employment opportunities and helping employers find qualified candidates.</p>
+          </div>
+          <span class="card-link">Visit QuickHire →</span>
+        </a>
+
+        <a class="brand-card" href="https://jobboard.quickhireagency.com/" aria-label="Visit QuickHire Job Board">
+          <div>
+            <div class="brand-logo-box">
+              <img src="/QuickHire%E2%84%A2%20Job%20Board%20logo.jpg" alt="QuickHire Job Board logo" loading="lazy">
+            </div>
+            <h3>QuickHire<sup>™</sup> Job Board</h3>
+            <p>A hiring and workforce platform designed to help employers post opportunities and connect with job seekers.</p>
+          </div>
+          <span class="card-link">Visit QuickHire Job Board →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="shell section" id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Contact Us</h2>
+        <p>For corporate inquiries, business correspondence, portfolio matters, or general information, contact Cook Services Company using the details below.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <address>
+            <strong>Cook Services Company, LLC</strong><br>
+            Market Square Center<br>
+            151 N. Delaware Street<br>
+            Suite 122<br>
+            Indianapolis, IN 46204<br>
+            <a href="tel:+13174421437">(317) 442-1437</a><br>
+            <a href="mailto:cookservicescompany@gmail.com">cookservicescompany@gmail.com</a>
+          </address>
+          <p class="contact-note">
+            This website provides general corporate information about Cook Services Company, LLC and its family of brands. Portfolio brands maintain their own customer-facing terms, policies, support channels, and operating information.
+          </p>
+
+          <form class="contact-form" onsubmit="sendCSCContactMessage(event)" aria-label="Send a message to Cook Services Company">
+            <div>
+              <label for="csc-contact-subject">Subject</label>
+              <input id="csc-contact-subject" name="subject" type="text" required placeholder="Message subject">
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="csc-contact-first-name">First Name</label>
+                <input id="csc-contact-first-name" name="first_name" type="text" required placeholder="First name">
+              </div>
+              <div>
+                <label for="csc-contact-last-name">Last Name</label>
+                <input id="csc-contact-last-name" name="last_name" type="text" required placeholder="Last name">
+              </div>
+            </div>
+
+            <div>
+              <label for="csc-contact-message">Message</label>
+              <textarea id="csc-contact-message" name="message" rows="6" required placeholder="Write your message here"></textarea>
+            </div>
+
+            <div class="contact-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <a class="btn btn-secondary" href="mailto:cookservicescompany@gmail.com?subject=Cook%20Services%20Company%20Inquiry">Email CSC</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-image">
+          <img src="https://www.cgnnews.net/Market_Square_Center,_Indianapolis.png" alt="Market Square Center, Indianapolis" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Site footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="/CSCLogo01.png" alt="Cook Services Company logo" loading="lazy">
+          <div>
+            <div class="footer-title">Cook Services Company, LLC</div>
+            <div class="footer-sub">
+              Corporate gateway for CSC brands, ventures, technology services, publishing, hiring, and investor resources.
+            </div>
+          </div>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="https://corporate.cook-international.com/">Cook Services Company</a>
+          <a href="https://corporate.cook-international.com/investors/">CSC Investments</a>
+          <a href="https://cts.cook-international.com/">Cook Technology Services</a>
+          <a href="https://www.cgnnews.net/">CGN News</a>
+          <a href="https://www.valoismedia.com/">Valois Media Holdings</a>
+          <a href="https://www.livingwordbibles.com/">Living Word Bibles</a>
+          <a href="https://www.quickhireagency.com/">QuickHire</a>
+          <a href="https://jobboard.quickhireagency.com/">QuickHire<sup>™</sup> Job Board</a>
+          <a href="/copyright/">Copyright</a>
+          <a href="https://corporate.cook-international.com/terms/">Terms of Service</a>
+          <a href="https://corporate.cook-international.com/privacy/">Privacy Policy</a>
+        </nav>
+
+        <div class="footer-contact">
+          Market Square Center<br>
+          151 N. Delaware Street, Suite 122<br>
+          Indianapolis, IN 46204<br>
+          <a href="tel:+13174421437">(317) 442-1437</a><br>
+          <a href="mailto:cookservicescompany@gmail.com">cookservicescompany@gmail.com</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <a class="copyright-link" href="/copyright/" aria-label="View Cook Services Company copyright, trademark, and intellectual property notice">
+          Copyright © <span id="year">2026</span> Cook Services Company, LLC | All Rights Reserved.
+        </a>
+        <span>Last Updated on 6 June 2026 at 20:02:21Z</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendCSCContactMessage(event) {
+      event.preventDefault();
+
+      const subject = document.getElementById('csc-contact-subject').value.trim();
+      const firstName = document.getElementById('csc-contact-first-name').value.trim();
+      const lastName = document.getElementById('csc-contact-last-name').value.trim();
+      const message = document.getElementById('csc-contact-message').value.trim();
+
+      const body = [
+        'First Name: ' + firstName,
+        'Last Name: ' + lastName,
+        '',
+        'Message:',
+        message
+      ].join('\n');
+
+      const mailto = 'mailto:cookservicescompany@gmail.com'
+        + '?subject=' + encodeURIComponent(subject || 'Cook Services Company Website Message')
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
